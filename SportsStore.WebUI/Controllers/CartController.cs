@@ -63,7 +63,7 @@ namespace SportsStore.WebUI.Controllers
                 ModelState.AddModelError("", "Sorry, your cart is empty!");
             }
 
-            if (ModelState.IsReadOnly) {
+            if (ModelState.IsValid) {
                 orderProcessor.ProcessOrder(cart, shippingDetails);
                 cart.Clear();
                 return View("Completed");

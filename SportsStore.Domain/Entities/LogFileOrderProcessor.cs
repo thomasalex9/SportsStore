@@ -33,7 +33,8 @@ namespace SportsStore.Domain.Entities
             body.AppendLine(shippingDetails.State);
             body.AppendLine(shippingDetails.Country);
             body.AppendLine(shippingDetails.Zip);
-            
+
+            Logger.Info("in Pro()cessOrder()", body.ToString());
          }
     }
 }
